@@ -1,0 +1,19 @@
+﻿@{ 
+    ViewBag.Title = "Workers";
+}
+
+<h2> Factory workers </h2>
+<table class=table ng-controller="WorkerController">
+    <tr>
+        <th> Name </th> 
+        <th> LastName </th>
+        <th> Guild </th>
+    </tr> 
+
+    <tr ng-repeat="worker in workers">
+        <td>{{ worker.Name }}</td> 
+        <td>{{ worker.LastName }}</td> 
+        <td>{{ worker.Guild.Name }}</td> 
+    </tr>
+
+</table>

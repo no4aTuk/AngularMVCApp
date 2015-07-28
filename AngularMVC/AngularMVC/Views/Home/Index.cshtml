@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html ng-app="AngularApp">
+<head>
+    <title> AngularMVC </title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="/#/">HomePage</a></li>
+               
+                    <li><a href="/#/workers">Workers </a></li>
+
+                    <li><a href="/#/login">LogIn</a></li>
+                    <li><a href="/#/register">Register</a></li>
+                    
+                    @Html.Partial("~/Views/Account/Logout.cshtml");
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+   
+    <div class="content" ng-view> </div>
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - TANKT all rights reserved</p>
+    </footer>
+    
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+</body>
+</html>
+
+
